@@ -1,0 +1,63 @@
+<Panel>:
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "horizontal"
+        padding: 20
+        spacing: 20
+
+        Widget:
+            size_hint_x: 0.65
+
+        BoxLayout:
+            orientation: "vertical"
+            size_hint_x: 0.35
+            spacing: 20
+
+            Label:
+                text: "2/4 CHICKENS INSIDE"
+                font_size: 50
+                bold: True
+                size_hint_y: 0.15
+                text_size: self.size
+                halign: "center"
+                valign: "middle"
+
+            Button:
+                text: "CLOSED"
+                font_size: 100
+                bold: True
+                size_hint_y: 0.45
+                background_color: (0, 1, 0, 1)
+                halign: "center"
+                valign: "middle"
+                on_release: root.toggle_gate(self)
+
+            BoxLayout:
+                orientation: "horizontal"
+                size_hint_y: 0.2
+                spacing: 20
+
+                Button:
+                    text: "Enable Hotplate"
+                    font_size: 32
+                    bold: True
+                    size_hint_x: 0.72
+                    background_color: (0, 0, 1, 1)
+
+                Label:
+                    text: "Temp: 36c"
+                    font_size: 24
+                    size_hint_x: 0.28
+                    text_size: self.size
+                    halign: "center"
+                    valign: "middle"
+
+            Label:
+                text: "I am also here!"
+                font_size: 50
+                bold: True
+                size_hint_y: 0.2
+                text_size: self.size
+                halign: "center"
+                valign: "middle"
